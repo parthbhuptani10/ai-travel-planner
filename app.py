@@ -15,7 +15,7 @@ st.write("Plan your personalized trip using AI-powered recommendations.")
 
 st.divider()
 
-# Input Layout (2 Columns)
+# Input Layout
 col1, col2 = st.columns(2)
 
 with col1:
@@ -60,12 +60,19 @@ place_data = {
     }
 }
 
+# 🔥 Session State Fix
+if "generated" not in st.session_state:
+    st.session_state.generated = False
+
 if st.button("🚀 Generate Travel Plan"):
+    st.session_state.generated = True
+
+if st.session_state.generated:
 
     prediction = model.predict([[budget, days, season_value]])
     category = prediction[0]
 
-    # 🔥 Add this highlight box here
+    # Highlight Box
     st.markdown(
         f"""
         <div style='padding:15px; border-radius:10px; background-color:#1f3b4d; color:white;'>
@@ -121,7 +128,7 @@ if st.button("🚀 Generate Travel Plan"):
         st.divider()
 
         # Day-wise Itinerary
-        st.subheader("📅 Suggested Day-wise Itinerary:")
+        st.subheader("📅 Suggested Day-wise Itinerary")
 
         attractions = data["attractions"]
         extra_experiences = [
