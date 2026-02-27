@@ -38,7 +38,7 @@ The system uses a supervised machine learning model to predict travel style and 
 ## 🌐 Live Deployment
 
 🔗 Streamlit App:  
-[LIVE_STREAMLIT_LINK_HERE](https://ai-travel-planner-ml.streamlit.app/)
+[Click here to try the AI Travel Planner](https://ai-travel-planner-ml.streamlit.app/)
 
 ---
 
