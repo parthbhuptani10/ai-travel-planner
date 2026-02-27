@@ -68,5 +68,3 @@ ai-travel-planner/
 
 Parth Bhuptani  
 AI & ML Virtual Internship Project  
-
-## 📂 Project Structure
